@@ -16,13 +16,29 @@
                 <p><strong>Your personal sales team</strong>, at your service.</p>
                 <p>Soon.</p>
                 <div class="email-form">
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLScgfKq_4fGAw7w0SYIZ7QxC7gZ4-gh5Vm0J_xK_AnB0jZyVXQ/formResponse" method="POST" target="_blank">
+                    <form id="email-form">
                         <input type="email" name="entry.1412110087" placeholder="Enter your email" required>
-                        <button type="submit">Notify Me</button>
+                        <button type="submit" id="submit-button">Notify Me</button>
                     </form>
+                    <p id="success-message" class="success-message">We're thrilled to have you on board! We will email you when we launch.</p>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('email-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            const formData = new FormData(this);
+            const request = new XMLHttpRequest();
+            request.open('POST', 'https://docs.google.com/forms/d/e/1FAIpQLScgfKq_4fGAw7w0SYIZ7QxC7gZ4-gh5Vm0J_xK_AnB0jZyVXQ/formResponse');
+            request.setRequestHeader('Accept', 'application/xml, text/xml, */*; q=0.01');
+            request.send(formData);
+
+            // Replace the form with the success message
+            document.getElementById('email-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
