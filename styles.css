@@ -85,17 +85,19 @@ input[type="email"] {
 button {
     padding: 10px;
     background-color: #F60033;
-    font-size: 1em;
+    font-size: 1.1em;
+    /*font-weight: bold;*/
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     height: 50px; /* Match the height of the input field */
-    width: 90px; /* Set a fixed width for the button */
+    width: 130px; /* Adjust the width as needed */
     box-sizing: border-box;
     vertical-align: middle; /* Align vertically in the middle */
 }
+
 .success-message {
     display: none;
     font-size: 1.4em;
