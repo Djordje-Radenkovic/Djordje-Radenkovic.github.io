@@ -20,21 +20,21 @@
         }
         img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
         }
         .container {
             max-width: 600px;
             padding: 20px;
-            border: 1px solid #fff;
-            border-radius: 10px;
         }
         input[type="email"] {
             padding: 10px;
             margin-top: 10px;
-            border: none;
+            border: 1px solid #ccc;
             border-radius: 5px;
             width: calc(100% - 22px);
+            box-sizing: border-box;
         }
         button {
             padding: 10px 20px;
@@ -48,16 +48,22 @@
         button:hover {
             background-color: #218838;
         }
+        h1 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="profile.jpg" alt="Your Picture">
+        <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Your Picture">
         <h1>Hi,</h1>
-        <p>Finding a job is hard. I knowww. I'll help you.</p>
+        <p>Finding a job is hard. I know. I'll help you.</p>
         <p>Coming Soon</p>
         <form action="https://docs.google.com/forms/d/e/1FAIpQLScgfKq_4fGAw7w0SYIZ7QxC7gZ4-gh5Vm0J_xK_AnB0jZyVXQ/formResponse" method="POST" target="_blank">
-            <input type="email" name="entry.1412110087" placeholder="Email Address" required>
+            <input type="email" name="entry.1412110087" placeholder="Enter your email" required>
             <button type="submit">Notify Me</button>
         </form>
     </div>
