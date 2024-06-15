@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: flex-start; /* Align to the left horizontally */
+    background: url('wallpaper.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    padding-left: 20px; /* Add padding to ensure content isn't flush with the edge */
+}
+
+.header {
+    position: absolute; /* Keep DJ in the top left */
+    top: 20px;
+    left: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center; /* Align items to the top */
+    width: 100%;
+    max-width: 600px; /* Limit the max width of the content box */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top:  calc(100vh / 4);
+    margin-left: calc(100vw / 60); /* Position 1/6 from the left */
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.4); /* Black background with more opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+p {
+    font-size: 1.4em;
+    margin: 10px 0;
+}
+
+.custom-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Ensure it takes full width */
+    margin-bottom: 10px; /* Adds space below the form */
+}
+
+input[type="email"] {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 350px; /* Ensure full width but leave space for button */
+    box-sizing: border-box;
+    margin-right: 0px; /* Removes space to the right */
+    height: 50px; /* Match the height of the button */
+    vertical-align: middle; /* Align vertically in the middle */
+    flex: 1;
+    flex-shrink: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: #F60033;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 50px; /* Match the height of the input field */
+    width: 90px; /* Set a fixed width for the button */
+    box-sizing: border-box;
+    vertical-align: middle; /* Align vertically in the middle */
+}
+
+
+button:hover {
+    background-color: #D1002B;
+}
+
+.coming-soon {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adds space below the "Coming Soon" text */
+    text-align: left; /* Left align the text */
+}
