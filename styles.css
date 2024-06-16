@@ -5,16 +5,16 @@ body, html {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
     display: flex;
-    align-items: flex-start; /* Align items to the top */
-    justify-content: flex-start; /* Align to the left horizontally */
+    align-items: flex-start;
+    justify-content: flex-start;
     background: url('brand.jpeg') no-repeat center center fixed;
     background-size: cover;
-    padding-left: 20px; /* Add padding to ensure content isn't flush with the edge */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding-left: 20px;
+    overflow-x: hidden;
 }
 
 .header {
-    position: absolute; /* Keep DJ in the top left */
+    position: absolute;
     top: 20px;
     left: 20px;
     font-size: 1.8em;
@@ -26,18 +26,18 @@ body, html {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
-    justify-content: center; /* Align items to the top */
+    align-items: flex-start;
+    justify-content: center;
     width: 100%;
-    max-width: 600px; /* Limit the max width of the content box */
+    max-width: 600px;
     padding: 20px;
     box-sizing: border-box;
-    margin-top:  calc(100vh / 4);
-    margin-left: calc(100vw / 60); /* Position 1/6 from the left */
+    margin-top: calc(100vh / 4);
+    margin-left: calc(100vw / 60);
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.4); /* Black background with more opacity */
+    background-color: rgba(255, 255, 255, 0.4);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
@@ -48,7 +48,7 @@ body, html {
 .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
+    align-items: flex-start;
 }
 
 p {
@@ -56,16 +56,12 @@ p {
     margin: 10px 0;
 }
 
-.custom-font {
-    font-family: 'Playfair Display', serif;
-}
-
 .email-form {
     display: flex;
-    flex-direction: row; /* Align items in a row */
-    align-items: center; /* Align items vertically */
-    width: 100%; /* Ensure it takes full width */
-    margin-bottom: 10px; /* Adds space below the form */
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 input[type="email"] {
@@ -73,11 +69,11 @@ input[type="email"] {
     font-size: 1.2em;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 350px; /* Ensure full width but leave space for button */
+    width: 350px;
     box-sizing: border-box;
-    margin-right: 0px; /* Removes space to the right */
-    height: 50px; /* Match the height of the button */
-    vertical-align: middle; /* Align vertically in the middle */
+    margin-right: 0px;
+    height: 50px;
+    vertical-align: middle;
     flex: 1;
     flex-shrink: 0;
 }
@@ -86,16 +82,15 @@ button {
     padding: 10px;
     background-color: #F60033;
     font-size: 1.1em;
-    /*font-weight: bold;*/
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    height: 50px; /* Match the height of the input field */
-    width: 130px; /* Adjust the width as needed */
+    height: 50px;
+    width: 130px;
     box-sizing: border-box;
-    vertical-align: middle; /* Align vertically in the middle */
+    vertical-align: middle;
 }
 
 .success-message {
@@ -115,6 +110,37 @@ button:hover {
 
 .coming-soon {
     margin-top: 20px;
-    margin-bottom: 20px; /* Adds space below the "Coming Soon" text */
-    text-align: left; /* Left align the text */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 10px;
+    }
+
+    .content-box {
+        padding: 15px;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        height: 45px;
+    }
+
+    .header {
+        font-size: 1.5em;
+    }
 }
