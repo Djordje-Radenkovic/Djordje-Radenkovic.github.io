@@ -116,6 +116,10 @@ button:hover {
 
 /* Media Queries for smaller screens */
 @media (max-width: 768px) {
+    body, html {
+        background-position: right center; /* Align background image to the right on small screens */
+    }
+
     .container {
         margin-top: 80px; /* Add more top margin to prevent overlap */
         margin-left: 10px;
