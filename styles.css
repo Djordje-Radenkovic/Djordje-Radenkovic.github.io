@@ -7,10 +7,10 @@ body, html {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    background: url('brand.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    background: #B9A995 url('brand.jpeg') no-repeat right center fixed;
+    background-size: auto 100%; /* Ensure the height fits and the right edge is always visible */
     padding-left: 20px;
-    overflow-x: hidden;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .header {
@@ -118,16 +118,24 @@ button:hover {
 @media (max-width: 768px) {
     body, html {
         background-position: right center; /* Align background image to the right on small screens */
+        overflow: hidden; /* Prevent scrolling */
+        padding-left: 0px;
+        align-items: center;
     }
 
     .container {
-        margin-top: 80px; /* Add more top margin to prevent overlap */
-        margin-left: 10px;
+        margin-top: 0; /* Remove top margin */
+        margin-left: 0; /* Remove left margin */
         padding: 10px;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        height: 100vh; /* Take full height of the viewport */
     }
 
     .content-box {
         padding: 15px;
+        width: calc(100% - 40px); /* Ensure it has equal space on both sides */
+        margin: 0 auto; /* Center the box */
     }
 
     p {
