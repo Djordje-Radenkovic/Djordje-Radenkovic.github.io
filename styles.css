@@ -117,7 +117,7 @@ button:hover {
 /* Media Queries for smaller screens */
 @media (max-width: 768px) {
     body, html {
-        background-position: right center; /* Align background image to the right on small screens */
+        background-position: 85% center; /* Align background image to the right on small screens */
         overflow: hidden; /* Prevent scrolling */
         padding-left: 0px;
         align-items: center;
@@ -133,6 +133,7 @@ button:hover {
     }
 
     .content-box {
+        background-color: rgba(255, 255, 255, 0.7); /* Increase opacity by changing alpha value to 0.8 */
         padding: 15px;
         width: calc(100% - 40px); /* Ensure it has equal space on both sides */
         margin: 0 auto; /* Center the box */
