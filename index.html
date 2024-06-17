@@ -102,10 +102,10 @@
             const affiliate = formData.get('affiliate');
             
             // Construct the URL for the Google Form submission
-            const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScgetkCMk1iRWTxwDjHU5o43ZOcpS038o662-RRSM-9w09vbQ/formResponse';
+            const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfX0YCCXKUt_C0RFhi3e81Dx4nNJdeTqfuMLbALn6UJ5g75oA/formResponse';
             const params = new URLSearchParams();
-            params.append('entry.906802134', email); // 
-            params.append('entry.495990582', affiliate); // 
+            params.append('entry.2108180063', email); // 
+            params.append('entry.838722465', affiliate); //
             // Send the request to the Google Form
             fetch(`${googleFormUrl}?${params.toString()}`, {
                 method: 'POST',
