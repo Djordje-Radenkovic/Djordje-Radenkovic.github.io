@@ -21,7 +21,7 @@
                     <div class="email-form">
                         <form id="email-form" class="waitlist-form">
                             <input type="email" class="email-input" name="email" placeholder="Enter your email" required>
-                            <input type="hidden" name="salesperson" id="salesperson">
+                            <input type="hidden" name="affiliate" id="affiliate">
                             <button type="submit" id="submit-button">Sign up</button>
                             <p style="font-size: 0.8em;  text-align: center;">Problems signing up? Email me at <a href="mailto:djradenkovi@gmail.com"  style="color: black">djradenkovi@gmail.com</a></p>
                         </form>
@@ -85,11 +85,11 @@
             return false;
         }
 
-        // Set the salesperson ID from the URL parameter to the hidden input field
+        // Set the affiliate person ID from the URL parameter to the hidden input field
         window.onload = function() {
-            var salesperson = getQueryVariable("salesperson");
-            if (salesperson) {
-                document.getElementById("salesperson").value = salesperson;
+            var affiliate = getQueryVariable("affiliate");
+            if (affiliate) {
+                document.getElementById("affiliate").value = affiliate;
             }
         }
 
@@ -99,14 +99,13 @@
             
             const formData = new FormData(this);
             const email = formData.get('email');
-            const salesperson = formData.get('salesperson');
+            const affiliate = formData.get('affiliate');
             
             // Construct the URL for the Google Form submission
-            const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfnU1CGPeGp7vXtdqfC1wDF9lZbRAI77X_kq2hvg3DLWr5YdA/formResponse';
+            const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScgetkCMk1iRWTxwDjHU5o43ZOcpS038o662-RRSM-9w09vbQ/formResponse';
             const params = new URLSearchParams();
-            params.append('entry.42365981', email); // Replace 'entry.1412110087' with the entry ID for the email question
-            params.append('entry.873301040', salesperson); // Replace 'entry.XXXXXX' with the entry ID for the salesperson question
-
+            params.append('entry.906802134', email); // 
+            params.append('entry.495990582', affiliate); // 
             // Send the request to the Google Form
             fetch(`${googleFormUrl}?${params.toString()}`, {
                 method: 'POST',
