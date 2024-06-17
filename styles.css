@@ -1,16 +1,25 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    width:100vw;
     font-family: 'Open Sans', sans-serif;
+    overflow-x:hidden; 
+}
+
+.landing-page{
+
+   
+    height: 100vh;
+    width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background: #B9A995 url('brand.jpeg') no-repeat right center fixed;
+    background: #B9A995 url('./brand.jpeg') no-repeat right center fixed;
     background-size: auto 100%; /* Ensure the height fits and the right edge is always visible */
-    padding-left: 20px;
-    overflow: hidden; /* Prevent scrolling */
+    /* padding-left: 20px; */
+    overflow-x:hidden; 
+
 }
 
 .header {
@@ -19,52 +28,64 @@ body, html {
     left: 20px;
     font-size: 1.8em;
     font-weight: bold;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Helvetica Neue', serif;
     color: #333;
+}
+
+.waitlist-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    max-width: 600px;
+    /* max-width: 600px; */
     padding: 20px;
     box-sizing: border-box;
-    margin-top: calc(100vh / 4);
-    margin-left: calc(100vw / 60);
+/*     margin-top: calc(100vh / 4);
+    margin-left: calc(100vw / 60); */
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     width: 100%;
+    max-width: 600px;
+    margin-top: calc(100vh / 2.8);
     box-sizing: border-box;
+    margin-left: calc(100vw/7);
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
 }
 
 p {
-    font-size: 1.4em;
-    margin: 10px 0;
+    font-size: 1.2em;
+    margin: 7px 0;
 }
 
 .email-form {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 90%;
     margin-bottom: 10px;
 }
 
-input[type="email"] {
+
+.email-input{
     padding: 10px;
     font-size: 1.2em;
     border: 1px solid #ccc;
@@ -76,6 +97,13 @@ input[type="email"] {
     vertical-align: middle;
     flex: 1;
     flex-shrink: 0;
+
+    width:70%;
+
+}
+
+.waitlist-form{
+    width:100%;
 }
 
 button {
@@ -102,6 +130,7 @@ button {
     padding: 10px;
     border-radius: 5px;
     margin-top: 20px;
+    text-align: center;
 }
 
 button:hover {
@@ -114,11 +143,115 @@ button:hover {
     text-align: left;
 }
 
+
+
+
+.why-me{
+    width: 100vw;
+    height: 100vh;
+    background: black url('./branding001.jpeg') no-repeat fixed;
+    background-position: left top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-it-works{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .image-container{
+    position: absolute;
+    margin-top: 100vh;
+    height: 100vh;
+    width:100vw;
+    background: url('./branding001.jpeg') no-repeat right center fixed;
+    opacity: 0.4;
+    z-index: 10;
+} */
+
+
+.why-me-heading{
+
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.why-me-p{
+    font-size: 1.4em;
+    color: #fff;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.why-me-li{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    list-style-position: inside;
+    margin-left: 70px
+}
+.centered-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:60%;
+}
+
+.example-container{
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 45px;
+}
+
+.example-text-left{
+    font-size: 1.1rem;
+    color:white; 
+    margin-right: 30px;
+    align-items: flex-start;
+}
+
+
+.example-image-right{
+    width: 35vw;
+    margin-top: 10px;
+}
+
+.example-image-left{
+    width: 20vw;
+    margin-right: 30px;
+}
+
+.example-text-right{
+    font-size: 1.1rem;
+    color:white; 
+}
+
+.second-page-btn{
+   
+    margin-top: 25px;
+    width: 30%;
+
+}
+
 /* Media Queries for smaller screens */
 @media (max-width: 768px) {
     body, html {
         background-position: 85% center; /* Align background image to the right on small screens */
-        overflow: hidden; /* Prevent scrolling */
+        overflow-x: hidden; 
         padding-left: 0px;
         align-items: center;
     }
@@ -126,10 +259,12 @@ button:hover {
     .container {
         margin-top: 0; /* Remove top margin */
         margin-left: 0; /* Remove left margin */
-        padding: 10px;
         align-items: center; /* Center items horizontally */
         justify-content: center; /* Center items vertically */
         height: 100vh; /* Take full height of the viewport */
+
+        justify-content: center;
+        align-items: center;
     }
 
     .content-box {
@@ -137,6 +272,8 @@ button:hover {
         padding: 15px;
         width: calc(100% - 40px); /* Ensure it has equal space on both sides */
         margin: 0 auto; /* Center the box */
+        margin:0;
+        align-self: center;
     }
 
     p {
@@ -155,5 +292,84 @@ button:hover {
 
     .header {
         font-size: 1.5em;
+        margin-left:15px;
+    }
+
+    .landing-page{
+        padding:0;
+    }
+
+    .second-page-btn{
+        width: 50%;
+    }
+
+    .how-it-works .centered-container .example-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .example-text-right{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .example-text-left{
+        font-size: 1rem;
+        margin:0;
+        text-align: left;
     }
 }
+
+@media (max-width: 425px){
+
+    .waitlist-title{
+        text-align: center;
+    }
+
+    .content p {
+        text-align: center;
+    }
+
+    .example-image-right{
+        width: 40vw;
+        margin-bottom:10px;
+    }
+
+    .example-text-right{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .example-text-left{
+        font-size: 0.9rem;
+        margin:0;
+        text-align: center;
+    }
+    .example-image-left{
+        width: 40vw;
+        margin:0;
+        margin-bottom:10px;
+    }
+
+    
+.second-page-btn{
+   
+    margin-top: 25px;
+    width: 35vw;
+    height:9vh;
+    width:80%;
+
+}
+
+.why-me{
+    background-position: center;
+}
+
+.why-me-heading{
+    font-size: 2.3rem;
+}
+.why-me p {
+    font-size:0.9rem;
+}
+
+    
+}
+

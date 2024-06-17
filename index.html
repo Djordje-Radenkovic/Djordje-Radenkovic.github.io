@@ -8,24 +8,69 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-    <div class="header">Zoran Ventures</div>
-    <div class="container">
-        <div class="content-box">
-            <div class="content">
-                <p>Finding a job is hard. I know. We're here to help.</p>
-                <p><strong>Your personal sales team</strong>, at your service.</p>
-                <p>Soon.</p>
-                <div class="email-form">
-                    <form id="email-form">
-                        <input type="email" name="email" placeholder="Enter your email" required>
-                        <input type="hidden" name="salesperson" id="salesperson">
-                        <button type="submit" id="submit-button">Join Waitlist</button>
-                    </form>
-                    <p id="success-message" class="success-message">Thrilled to have you on board! We will email you when we launch.</p>
+    <div class="landing-page">
+        <div class="header">ZORAN</div>
+        <div class="container">
+            <div class="content-box">
+                <div class="content">
+                    <div class="waitlist-title">Join the waitlist</div>
+                    <p>Finding a job is hard. We know. We're here to help.</p>
+                    <p style="text-align: center;">Submit your resume, tell us the job you want,
+                    <p> <strong>we'll take care of the rest</strong>.</p>
+                    <p>Coming Soon.</p>
+                    <div class="email-form">
+                        <form id="email-form" class="waitlist-form">
+                            <input type="email" class="email-input" name="email" placeholder="Enter your email" required>
+                            <input type="hidden" name="salesperson" id="salesperson">
+                            <button type="submit" id="submit-button">Sign up</button>
+                            <p style="font-size: 0.8em;  text-align: center;">Problems signing up? Email me at <a href="mailto:djradenkovi@gmail.com"  style="color: black">djradenkovi@gmail.com</a></p>
+                        </form>
+                        <p id="success-message" class="success-message">Thrilled to have you on board! We will email you when we launch.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="how-it-works">
+
+
+        <div class="centered-container">
+            <div class="example-container">
+                <div class="example-text-left">
+                    <h1>How does it work?</h1>
+                     <p>We find the job offers. We write the emails. You just click <strong>send</strong> (or we can do that too).</p>
+                     <p>44 EUR / month. 100 job applications. If you don't get a single interview, you get half the money back.</p>
+                </div>
+                <img src="terminal.jpeg" class="example-image-right" alt="">
+            </div>
+
+            <button class="second-page-btn" onclick="scrollToTop()">Join the Waitlist</button>
+        </div>
+
+    </div>
+
+    <div class="why-me">
+
+        <div class="centered-container">
+            <div class="why-me-heading">Who Am I?</div>
+            <p class="why-me-p">I'm Djordje. <strong>sending the right emails</strong> landed me:</p>
+                <ul>
+                    <li class="why-me-li"> Interviews at Goldman Sachs, Bank of America, Jane Street.</li>
+                    <li class="why-me-li">An offer from <strong>Cambridge</strong>.</li>
+                    <li class="why-me-li">Job at a <strong>hedge fund</strong> and internship on a <strong>trading floor</strong>.</li>
+                    <li class="why-me-li"><strong>€170 000</strong> worth of scholarships </li>
+                    <li class="why-me-li"><strong>€500 000</strong> funding from Y Combinator.</li>
+                    <li class="why-me-li">A spam block... Legend.</li>
+                </ul>
+            <p class="why-me-p">I sent over 1000 applications. I learned what works.</p>
+            <p class="why-me-p" >And I'm <strong>at your service to help you land your dream job.</strong></p>
+
+            <button class="second-page-btn" onclick="scrollToTop()">Join the Waitlist</button>
+        </div>
+
+    </div>
+  
     <script>
         // Function to get the query parameter value
         function getQueryVariable(variable) {
@@ -74,6 +119,31 @@
                 console.error('Error submitting the form:', error);
             });
         });
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function adjustLayoutForScreenWidth() {
+            const screenWidth = window.innerWidth;
+            const firstExampleContainer = document.querySelector('.centered-container .example-container:first-child');
+            const image = firstExampleContainer.querySelector('img');
+            const text = firstExampleContainer.querySelector('.example-text-left');
+
+            if (screenWidth < 769) {
+                // Move the image before the text
+                firstExampleContainer.insertBefore(image, text);
+            } else {
+                // Optional: Adjust layout for wider screens if necessary
+            }
+        }
+
+        adjustLayoutForScreenWidth();
+
+        // Adjust layout on window resize
+        window.addEventListener('resize', adjustLayoutForScreenWidth);
     </script>
 </body>
 </html>
