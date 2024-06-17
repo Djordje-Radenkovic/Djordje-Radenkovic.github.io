@@ -143,9 +143,6 @@ button:hover {
     text-align: left;
 }
 
-
-
-
 .why-me{
     width: 100vw;
     height: 100vh;
@@ -175,6 +172,9 @@ button:hover {
     z-index: 10;
 } */
 
+.why-me .second-page-btn{
+    width:30%;
+}
 
 .why-me-heading{
 
@@ -222,6 +222,7 @@ button:hover {
     color:white; 
     margin-right: 30px;
     align-items: flex-start;
+    text-align: left;
 }
 
 
@@ -243,8 +244,60 @@ button:hover {
 .second-page-btn{
    
     margin-top: 25px;
-    width: 30%;
+    width: 40%;
 
+}
+.how-it-works .centered-container{
+    width: 80%;
+}
+
+
+@media (max-width: 920px){
+
+    .why-me-p{
+        font-size: 1rem;
+    }
+    
+    .second-page-btn{
+        width:30%;
+    }
+
+    .why-me .second-page-btn{
+        width: 70%;
+    }
+
+    .example-text-left{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .example-text-left p{
+        font-size: 1rem;
+        text-align:center;
+    }
+
+    .example-text-left h1{
+        font-size: 1.8rem;
+        text-align:center;
+    }
+
+    .why-me-li{
+        font-size: 1rem;
+    }
+    .why-me-heading{
+        font-size: 2.2rem;
+    }
+
+    .how-it-works .centered-container{
+        width: 90%;
+    }
+
+    .how-it-works .centered-container .example-container{
+        display: flex;
+        width:90%;
+        flex-direction: column;
+    }
 }
 
 /* Media Queries for smaller screens */
@@ -255,6 +308,19 @@ button:hover {
         padding-left: 0px;
         align-items: center;
     }
+
+    .why-me-heading{
+        font-size: 2.3rem;
+    }
+    .why-me-p {
+        font-size: 0.8em;
+    }
+    
+    .why-me-li{
+        font-size:1rem;
+        margin-left:0;
+    }
+
 
     .container {
         margin-top: 0; /* Remove top margin */
@@ -303,11 +369,6 @@ button:hover {
         width: 50%;
     }
 
-    .how-it-works .centered-container .example-container{
-        display: flex;
-        flex-direction: column;
-    }
-
     .example-text-right{
         font-size: 1.2rem;
         text-align: center;
@@ -319,14 +380,23 @@ button:hover {
     }
 }
 
+
 @media (max-width: 425px){
+
 
     .waitlist-title{
         text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .header{
+        font-size:1rem;
+
     }
 
     .content p {
         text-align: center;
+        font-size:1rem;
     }
 
     .example-image-right{
@@ -341,12 +411,16 @@ button:hover {
     .example-text-left{
         font-size: 0.9rem;
         margin:0;
-        text-align: center;
+        text-align: left;
     }
     .example-image-left{
         width: 40vw;
         margin:0;
         margin-bottom:10px;
+    }
+    
+    .why-me .centered-container{
+        width:80%;
     }
 
     
@@ -366,8 +440,12 @@ button:hover {
 .why-me-heading{
     font-size: 2.3rem;
 }
-.why-me p {
-    font-size:0.9rem;
+.why-me-p {
+    font-size:0.8rem;
+}
+
+.whi-me-li{
+    font-size:0.8rem
 }
 
     

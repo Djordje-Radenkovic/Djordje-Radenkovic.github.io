@@ -41,11 +41,11 @@
                     <h1>How does it work?</h1>
                      <p>We find the job offers. We write the emails. You just click <strong>send</strong> (or we can do that too).</p>
                      <p>44 EUR / month. 100 job applications. If you don't get a single interview, you get half the money back.</p>
+                     <button class="second-page-btn" onclick="scrollToTop()">Join the Waitlist</button>
                 </div>
                 <img src="terminal.jpeg" class="example-image-right" alt="">
             </div>
 
-            <button class="second-page-btn" onclick="scrollToTop()">Join the Waitlist</button>
         </div>
 
     </div>
@@ -130,19 +130,20 @@
             const firstExampleContainer = document.querySelector('.centered-container .example-container:first-child');
             const image = firstExampleContainer.querySelector('img');
             const text = firstExampleContainer.querySelector('.example-text-left');
-
-            if (screenWidth < 769) {
+ 
+            if (screenWidth < 921) {
                 // Move the image before the text
                 firstExampleContainer.insertBefore(image, text);
             } else {
+                firstExampleContainer.insertBefore(text, image);
                 // Optional: Adjust layout for wider screens if necessary
             }
         }
-
+ 
         adjustLayoutForScreenWidth();
 
-        // Adjust layout on window resize
         window.addEventListener('resize', adjustLayoutForScreenWidth);
+
     </script>
 </body>
 </html>
