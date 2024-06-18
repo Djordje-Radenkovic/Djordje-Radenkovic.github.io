@@ -148,6 +148,7 @@ button:hover {
     height: 100vh;
     background: black url('./branding001.jpeg') no-repeat;
     background-position: left top;
+    background-size: cover; /*auto 100%; */ 
     display: flex;
     align-items: center;
     justify-content: center;
