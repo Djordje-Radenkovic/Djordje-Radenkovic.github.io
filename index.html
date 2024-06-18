@@ -86,10 +86,21 @@
         }
 
         // Set the affiliate person ID from the URL parameter to the hidden input field
+        // window.onload = function() {
+        //     var affiliate = getQueryVariable("affiliate");
+        //     if (affiliate) {
+        //         document.getElementById("affiliate").value = affiliate;
+        //     }
+        // }
+
+        // Set the affiliate person ID from the URL parameter to the hidden input field
         window.onload = function() {
             var affiliate = getQueryVariable("affiliate");
+            var sp = getQueryVariable("SP");
             if (affiliate) {
                 document.getElementById("affiliate").value = affiliate;
+            } else if (sp) {
+                document.getElementById("affiliate").value = sp;
             }
         }
 
