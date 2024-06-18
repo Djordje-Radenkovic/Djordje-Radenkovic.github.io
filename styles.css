@@ -15,8 +15,8 @@ body, html {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background: #B9A995 url('./brand.jpeg') no-repeat right center fixed;
-    background-size: auto 100%; /* Ensure the height fits and the right edge is always visible */
+    background: #B9A995 url('./brand.jpeg') no-repeat right center;
+    background-size: cover; /*auto 100%; */ 
     /* padding-left: 20px; */
     overflow-x:hidden; 
 
