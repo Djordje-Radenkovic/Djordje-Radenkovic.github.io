@@ -143,15 +143,18 @@ button:hover {
     text-align: left;
 }
 
-.why-me{
+
+.why-me {
     width: 100vw;
     height: 100vh;
-    background: black url('./branding001.jpeg') no-repeat;
-    background-position: left top;
-    background-size: cover; /*auto 100%; */ 
+    background: black url('./branding001.jpeg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire background */
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Prevents any overflow issues */
+    margin: 0; /* Ensures there is no default margin */
+    padding: 0; /* Ensures there is no default padding */
 }
 
 .how-it-works{
