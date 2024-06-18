@@ -147,7 +147,7 @@ button:hover {
 .why-me {
     width: 100vw;
     height: 100vh;
-    background: black url('./branding001.jpeg') no-repeat center center;
+    background: black url('./branding001.jpeg') no-repeat left top;
     background-size: cover; /* Ensures the image covers the entire background */
     display: flex;
     align-items: center;
