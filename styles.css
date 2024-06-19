@@ -394,8 +394,8 @@ button:hover {
 @media (max-width: 425px){
 
     .why-me {
-        background: black url('./branding001.jpeg') no-repeat left top;
-        background-size: auto 100%; /* Ensures the height fits and the left edge is always visible */
+        background-position : 10% 40%;
+        
     }
 
     .waitlist-title{
