@@ -436,9 +436,6 @@ button:hover {
     .why-me .centered-container{
         width:80%;
     }
-    .why-me {
-        background: black url('./branding001.jpeg') no-repeat left center;
-    }
     
 .second-page-btn{
    
@@ -449,9 +446,7 @@ button:hover {
 
 }
 
-.why-me{
-    background-position: center;
-}
+
 
 .why-me-heading{
     font-size: 2.3rem;
