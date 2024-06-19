@@ -15,7 +15,7 @@ body, html {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background: #B9A995 url('./brand.jpeg') no-repeat right center;
+    background: #B9A995 url('./wallpaper.jpeg') no-repeat center center;
     background-size: cover; /*auto 100%; */ 
     /* padding-left: 20px; */
     overflow-x:hidden; 
@@ -29,7 +29,7 @@ body, html {
     font-size: 1.8em;
     font-weight: bold;
     font-family: 'Helvetica Neue', sans-serif;
-    color: #333;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .waitlist-title {
@@ -53,15 +53,16 @@ body, html {
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
     width: 100%;
     max-width: 600px;
     margin-top: calc(100vh / 2.8);
     box-sizing: border-box;
-    margin-left: calc(100vw/7);
+    /*margin-left: calc(100vw/7);*/
+    align-self: center;
 }
 
 .content {
@@ -323,11 +324,11 @@ button:hover {
         font-size: 2.3rem;
     }
     .why-me-p {
-        font-size: 0.8em;
+        font-size: 1em;
     }
     
     .why-me-li{
-        font-size:1rem;
+        font-size:0.8rem;
         margin-left:0;
     }
 
@@ -437,27 +438,27 @@ button:hover {
         width:80%;
     }
     
-.second-page-btn{
-   
-    margin-top: 25px;
-    width: 35vw;
-    height:9vh;
-    width:80%;
+    .second-page-btn{
+    
+        margin-top: 25px;
+        width: 35vw;
+        height:9vh;
+        width:80%;
 
-}
+    }
 
 
 
-.why-me-heading{
-    font-size: 2.3rem;
-}
-.why-me-p {
-    font-size:0.8rem;
-}
+    .why-me-heading{
+        font-size: 2.3rem;
+    }
+    .why-me-p {
+        font-size:1rem;
+    }
 
-.whi-me-li{
-    font-size:0.8rem
-}
+    .whi-me-li{
+        font-size:0.8rem;
+    }
 
     
 }
