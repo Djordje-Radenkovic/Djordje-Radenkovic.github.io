@@ -15,7 +15,7 @@ body, html {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background: black url('./wallpaper.jpeg') no-repeat center center;
+    background: black url('./lastpage.jpeg') no-repeat center top;
     background-size: cover; /*auto 100%; */ 
     /* padding-left: 20px; */
     overflow-x:hidden; 
